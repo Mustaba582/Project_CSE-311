@@ -121,7 +121,7 @@ button
 
 }
 
-button :hover
+button:hover
 {
     border-color:#53cbf1;
     transition: 0.5s;
