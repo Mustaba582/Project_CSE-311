@@ -15,18 +15,25 @@ body{
  text-align: center;
  background-color: blanchedalmond;
  border: 5px rgb(255, 169, 169) solid;
+ border-radius: 15px;
  color: rgba(0, 0, 255, 0.582);
  font-size: x-large;
  padding: 10px;
+ margin-top: 10px;
+ margin-left: 10px;
+ margin-right: 10px;
+ margin margin-bottom: 15px; 
 }
 
 
 .section1{
 text-align: center;
 border: 0.8px rgb(85, 128, 0) dotted;
-border-width: .15rem;
+border-width: .11rem;
 border-radius: 15px;
-margin: 10px 0;
+margin: 25px 0;
+margin-left: 10px;
+ margin-right: 10px;
 }
 
 
@@ -52,6 +59,7 @@ margin: 10px 0;
 
 .my-form input[type="text"], .my-form input[type="number"], .my-form input[type="password"], .my-form textarea{
  border: 2px red solid;
+ border-radius: 15px;
  padding: 9px;
  padding-left: 5px;
  width: 95%;
@@ -63,5 +71,6 @@ margin: 10px 0;
  color: #ffffff;
  padding: 12px 60px;
  border: none;
+ border-radius: 15px;
  margin-bottom: 40px;
 }
