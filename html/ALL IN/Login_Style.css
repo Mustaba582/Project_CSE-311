@@ -4,7 +4,7 @@ body
 margin: 0;
 padding: 0;
 font-family: 'Roboto', sans-serif;
-background: linear-gradient(to bottom, #8fc400 0%,#8fc400 100%);
+background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
 height: 100vh;
 overflow: hidden;
 }
@@ -16,7 +16,7 @@ overflow: hidden;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-    background: white;
+    background:white;
     border-radius: 10px;
 }
 
@@ -25,7 +25,7 @@ overflow: hidden;
     text-align: center;
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
-    color: #8fc400;
+    color: #53cbf1;
 }
 
 .center form
@@ -74,7 +74,7 @@ form .txt_field
     left: 0;
     width: 0%;
     height: 2px;
-    background: #8fc400;
+    background: #53cbf1;
     transition: .5s;
 
 }
@@ -83,7 +83,7 @@ form .txt_field
 .txt_field input:focus ~ label
 {
     top: -5px;
-    color:#8fc400;
+    color:#53cbf1;
 
 }
 
@@ -111,7 +111,7 @@ button
     width: 100%;
     height: 50px;
     border: 1px solid;
-    background: #8fc400;;
+    background: #53cbf1;
     border-radius: 25px;
     font-size: 18px;
     color: #e4f4fb;
@@ -123,7 +123,7 @@ button
 
 button :hover
 {
-    border-color:#8fc400;
+    border-color:#53cbf1;
     transition: 0.5s;
 
 }
@@ -139,7 +139,7 @@ button :hover
 }
 .signup_link a
 {
-    color:#8fc400;
+    color:#53cbf1;
     text-decoration: none;
 
 }
