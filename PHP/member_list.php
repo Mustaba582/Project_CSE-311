@@ -23,7 +23,7 @@
                         <div class="main-menu">
                             <ul>
                                 <li>
-                                    <a href="member.html">Home</a>
+                                    <a href="member.php">Home</a>
                                 </li>
                             </ul>
                         </div>

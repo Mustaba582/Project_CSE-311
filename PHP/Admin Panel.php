@@ -12,14 +12,14 @@
 												<div class="top">
 																<p>Name: <br><br> User ID: <br><br> Designation:</p>
 												</div>
-												 <a href="Login.html">
+												 <a href="Login.php">
 														<button class="button"><u>Logout</u></button>
 											    </a>
 
-												<a href="admin_list.html">
+												<a href="admin_list.php">
 												     <button class="SA">SHOW ALL BOOKS</button>
 												</a>
-													<a href="ordered_list.html">
+													<a href="ordered_list.php">
 												     <button class="SO">SHOW ORDERED BOOKS</button>
 													</a>
 								</div>
