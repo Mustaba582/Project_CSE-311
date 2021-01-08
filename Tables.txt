@@ -1,0 +1,11 @@
+1. Member Info.
+
+2. Admin  Info.
+
+3. All Book List  (Book_id, Book_name , Genre , Author , Year_Of_Publication, Format)
+
+4. Boorrowed Book List  (Mem_Id, Book_id, Book_Name , Issue_date, Return_date)
+
+5. Ordered Book List(Admin)  ( Admin_id, Book_id, Publisher_Id, Book_Name , Arrival_date, Ordered_date)
+
+6. Publisher (Publisher_Id , Publisher_Name , Address)
