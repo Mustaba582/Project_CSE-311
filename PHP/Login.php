@@ -27,7 +27,7 @@
             
             
             <div class="signup_link">
-                Not a member? <a href="create_new_account.html">Signup</a>
+                Not a member? <a href="create_new_account.php">Signup</a>
             </div>
         </form>
     </div>

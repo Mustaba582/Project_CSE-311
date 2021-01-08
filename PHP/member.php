@@ -15,7 +15,7 @@
          <p>Name: <br><br> User ID: <br><br> Membership Validity:</p>
       </div>
 
-    <a href="Login.html">
+    <a href="Login.php">
       <button class="button"><u>Logout</u></button>
     </a>
    </div>
@@ -39,7 +39,7 @@
             <li>book one</li>
             <li>book one</li>
          </ol>
-         <a href="member_list.html">
+         <a href="member_list.php">
             <button class="SA">View All books</button>
      	 </a>
       </div>

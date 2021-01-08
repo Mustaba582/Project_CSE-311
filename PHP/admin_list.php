@@ -23,7 +23,7 @@
                         <div class="main-menu">
                             <ul>
                                 <li>
-                                    <a href="Admin Panel.html">Home</a>
+                                    <a href="Admin Panel.php">Home</a>
                                 </li>
                             </ul>
                         </div>
