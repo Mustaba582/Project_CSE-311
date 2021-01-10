@@ -19,6 +19,8 @@ include "connection.php";
   </header>
 
   <section class="section1">
+     <br>
+    <a href="Login.php"><input class="button" type="submit" name="submit" value="Back to Login Page"></a>
     <div>
       <form class="my-form" action="" method="post">
         <div class="form-group">
@@ -38,13 +40,10 @@ include "connection.php";
           <input type="text" name="address" required="">
           <br><br>
           <input class="button" type="submit" name="submit" value="Create Account">
-          <br>
-          <a href="Admin Panel.php"><input class="button" type="submit" name="submit" value="Back to Login"></a>
         </div>
       </form>
     </div>
   </section>
-
   <?php
 
   if (isset($_POST['submit'])) {
