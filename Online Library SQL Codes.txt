@@ -3,11 +3,12 @@ CREATE DATABASE Online_Library
 CREATE TABLE 
 Member_info
 (
+    
+    User_id int PRIMARY KEY,
+    Password varchar(30), 
     Name varchar (50) ,
-    User_id int PRIMARY KEY, 
+    contact_num  varchar(20),
     Address varchar (50),
-    Contact_no varchar(20),
-    Password varchar(30),
     Mem_exp varchar (20)
    
 );
@@ -64,12 +65,13 @@ Ordered_Book_List_Admin
    Ordered_date varchar (30)
    
 );
+
 CREATE TABLE 
 Publisher
 (
     Publisher_Id int , 
     Publisher_Name varchar (30), 
     Address varchar (30),
-     primary key(Publisher_Id,Publisher_Name)
+    primary key(Publisher_Id,Publisher_Name)
     
 );
