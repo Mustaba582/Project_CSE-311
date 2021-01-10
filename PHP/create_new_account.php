@@ -38,6 +38,8 @@ include "connection.php";
           <input type="text" name="address" required="">
           <br><br>
           <input class="button" type="submit" name="submit" value="Create Account">
+          <br>
+          <a href="Admin Panel.php"><input class="button" type="submit" name="submit" value="Back to Login"></a>
         </div>
       </form>
     </div>
