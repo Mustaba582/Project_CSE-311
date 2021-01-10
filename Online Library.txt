@@ -1,22 +1,26 @@
 CREATE DATABASE Online_Library
 
 CREATE TABLE 
-Member 
+Member_info
 (
-    Name varchar (50) PRIMARY KEY,
+    Name varchar (50) ,
+    User_id int PRIMARY KEY, 
     Address varchar (50),
-    Phone_num varchar(20),
+    Contact_no varchar(20),
+    Password varchar(30),
     Mem_exp varchar (20)
    
 );
 
 
 CREATE TABLE 
-Admin 
+Admin_info 
 (
-    Name varchar (50) PRIMARY KEY,
+    Name varchar (50),
+    User_id int PRIMARY KEY,
     Designation varchar (50),
     Contact_Info varchar(20)
+    Password varchar(30)
    
 );
 
