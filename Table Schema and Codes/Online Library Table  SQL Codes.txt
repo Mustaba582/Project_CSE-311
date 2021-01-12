@@ -20,7 +20,7 @@ Admin_info
     Name varchar (50),
     User_id int PRIMARY KEY,
     Designation varchar (50),
-    Contact_Info varchar(20)
+    Contact_Info varchar(20),
     Password varchar(30)
    
 );
