@@ -1,3 +1,9 @@
+<?php
+include "connection.php";
+
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -21,18 +27,18 @@
                 <input type="password" required>
                 <span></span>
                 <label>Password</label>
-                </div>
-        
-            <button type="submit">Login</button> 
-            
-            
+            </div>
+
+            <button type="submit">Login</button>
+
+
             <div class="signup_link">
                 Not a member? <a href="create_new_account.php">Signup</a>
             </div>
         </form>
     </div>
 
-    
+
 </body>
 
 </html>
