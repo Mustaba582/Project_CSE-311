@@ -16,7 +16,7 @@
 														<button class="button"><u>Logout</u></button>
 											    </a>
 
-												<a href="admin_list.php">
+												<a href="all_books.php">
 												     <button class="SA">SHOW ALL BOOKS</button>
 												</a>
 													<a href="ordered_list.php">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book List</title>
+    <title>Member Book List</title>
 
     <link rel="stylesheet" href="list_style.css">
 </head>
@@ -35,7 +35,7 @@
     <div class="borrowed_box">
 
         <div class="top">
-            <h1 class="hi1">Books List</h1>
+            <h1 class="hi1">Borrowed Books List</h1>
         </div>
 
         <div>

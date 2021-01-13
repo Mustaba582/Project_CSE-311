@@ -15,9 +15,9 @@
          <p>Name: <br><br> User ID: <br><br> Membership Validity:</p>
       </div>
 
-    <a href="Login.php">
-      <button class="button"><u>Logout</u></button>
-    </a>
+      <a href="Login.php">
+         <button class="button"><u>Logout</u></button>
+      </a>
    </div>
 
    <div class="borrowed_box">
@@ -39,9 +39,9 @@
             <li>book one</li>
             <li>book one</li>
          </ol>
-         <a href="member_list.php">
+         <a href="all_books.php">
             <button class="SA">View All books</button>
-     	 </a>
+         </a>
       </div>
 
    </div>
