@@ -1,15 +1,15 @@
 CREATE DATABASE Online_Library
 
 CREATE TABLE 
-Member_info
+member_info
 (
     
-    User_id int PRIMARY KEY,
-    Password varchar(30), 
-    Name varchar (50) ,
-    contact_num  varchar(20),
-    Address varchar (50),
-    Mem_exp varchar (20)
+    user_id int PRIMARY KEY,
+    password varchar(30), 
+    name varchar (50) ,
+    contact_no  varchar(20),
+    address varchar (50),
+    mem_exp varchar (20)
    
 );
 
@@ -17,11 +17,11 @@ Member_info
 CREATE TABLE 
 Admin_info 
 (
-    Name varchar (50),
-    User_id int PRIMARY KEY,
-    Designation varchar (50),
-    Contact_Info varchar(20),
-    Password varchar(30)
+    name varchar (50),
+    user_id int PRIMARY KEY,
+    designation varchar (50),
+    contact_Info varchar(20),
+    password varchar(30)
    
 );
 

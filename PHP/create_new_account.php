@@ -34,7 +34,7 @@ include "connection.php";
           <input type="text" name="Name" required="">
 
           <label>Contact no: </label>
-          <input type="number" name="contact_no" required="">
+          <input type="text" name="contact_no" required="">
 
           <label>Address: </label>
           <input type="text" name="address" required="">
@@ -56,6 +56,9 @@ include "connection.php";
         $count = $count + 1;
       }
     }
+    $exp_date = strtotime("+3 Year");
+    $exp_date_store = date("F j, Y, g:i a", $exp_date);
+
     if ($count == 0) {
       mysqli_query($connection, "INSERT INTO `member_info` VALUES('$_POST[user_id]', '$_POST[password]', '$_POST[Name]', '$_POST[contact_no]', '$_POST[address]');");
   ?>

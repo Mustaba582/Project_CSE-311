@@ -2,7 +2,7 @@
 $server_name = "localhost";
 $user_name = "root";
 $password = "";
-$database = "library_proj";
+$database = "Online_Library";
 
 $connection = mysqli_connect($server_name, $user_name, $password, $database);
 if($connection == false){
