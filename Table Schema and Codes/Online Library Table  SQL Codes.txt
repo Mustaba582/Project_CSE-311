@@ -9,7 +9,7 @@ member_info
     name varchar (50) ,
     contact_no  varchar(20),
     address varchar (50),
-    mem_exp varchar (20)
+    mem_exp timestamp
    
 );
 

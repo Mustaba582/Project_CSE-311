@@ -57,10 +57,10 @@ include "connection.php";
       }
     }
     $exp_date = strtotime("+3 Year");
-    $exp_date_store = date("F j, Y, g:i a", $exp_date);
+    $exp_date_store = date("Y-m-d H:i:s", $exp_date);
 
     if ($count == 0) {
-      mysqli_query($connection, "INSERT INTO `member_info` VALUES('$_POST[user_id]', '$_POST[password]', '$_POST[Name]', '$_POST[contact_no]', '$_POST[address]');");
+      mysqli_query($connection, "INSERT INTO `member_info` VALUES('$_POST[user_id]', '$_POST[password]', '$_POST[Name]', '$_POST[contact_no]', '$_POST[address]', '$exp_date_store');");
   ?>
       <script type="text/javascript">
         alert("Registration successful");
