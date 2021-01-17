@@ -1,0 +1,6 @@
+1.database field member info table coloum user_type
+2. create new acoount 0 in line 67
+3.Condition in login line 23   $_SESSION['user_type'] = $row['user_type'];
+4.Index error fix meber page 148 line in member if (isset($_POST['book_isbn']))
+5. all book list listing
+6. index sort login 54

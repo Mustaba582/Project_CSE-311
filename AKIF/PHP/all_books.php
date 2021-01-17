@@ -1,6 +1,10 @@
 <?php
 include "connection.php";
 
+
+
+$sql = "SELECT Book_id, Book_name, Genre, Author from `all_book_list`";
+$res = mysqli_query($connection, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,23 +45,19 @@ include "connection.php";
   <div class="top">
    <h1 class="hi1">Inventory Books List</h1>
   </div>
-
+    <!-- <pre><?php print_r($booklist); ?></pre> -->
   <div>
-   <ol class="borrowed_list">
-    <li>book one</li>
-    <li>book one</li>
-    <li>book one</li>
-    <li>book one</li>
-    <li>book one</li>
-    <li>book one</li>
-    <li>book one</li>
-    <li>book one</li>
-    <li>book one</li>
-    <li>book one</li>
-   </ol>
+   <ul class="borrowed_list">
+   <?php if(mysqli_num_rows($res) > 0){
+        while($booklist = mysqli_fetch_assoc($res)){
+    ?>
+    <li><?php echo "ISBN:  " ." " .$booklist["Book_id"] ." " .", Name: " ." " .$booklist["Book_name"] . ",  Author: " . $booklist['Author']; ?></li>
+    <?php } } ?>
+   </ul>
   </div>
 
  </div>
 </body>
 
 </html>
+

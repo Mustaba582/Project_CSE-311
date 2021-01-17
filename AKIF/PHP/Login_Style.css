@@ -147,9 +147,3 @@ button:hover
 {
     text-decoration: underline ;
 }
-
-.alert-danger {
-    background: rgb(255, 70, 70);
-    color: #fff;
-    padding: 4px 10px;
-}

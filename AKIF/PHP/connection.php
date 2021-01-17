@@ -9,7 +9,7 @@ if($connection == false){
  die("Error connecting. " .mysqli_connect_error());
 }
 else{
- //echo "Connected";
+ echo "Connected";
 }
 
 ?>
