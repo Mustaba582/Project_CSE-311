@@ -149,7 +149,7 @@ if(isset($_POST['logout']))
            if ($count == 1) {
                 while ($row = mysqli_fetch_assoc($res)) {
                       if ($row['Book_id'] == $_POST['book_isbn']) {
-                         $sql2 = "INSERT INTO borrowed_book_list VALUES ($_SESSION['user_id'] , $_POST['book_isbn'] , $row['Book_name'], '$issue_date_store', '$return_date_store')";
+                         $sql2 = "INSERT INTO borrowed_book_list VALUES ($_SESSION[user_id] , $_POST[book_isbn] , $row[Book_name], '$issue_date_store', '$return_date_store')";
                          $res2 = mysqli_query($connection, $sql2);
                       }
                 }   
