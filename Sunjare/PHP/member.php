@@ -1,5 +1,18 @@
 <?php
 include "connection.php";
+session_start();
+if(isset($_SESSION['login'])) {
+   if($_SESSION['login'] != true) {
+      header("Location: ./index.php");
+   }
+} else {
+   header("Location: ./index.php");
+}
+if(isset($_POST['logout'])) 
+{
+   unset($_SESSION['login'], $_SESSION['name'], $_SESSION['user_id']);
+   header("Location: ./index.php");
+}
 ?>
 
 
@@ -17,7 +30,7 @@ include "connection.php";
    <div class="user_info_box">
 
       <div class="top">
-         <p>Name: <br><br> User ID: <br><br> Membership Validity:</p>
+         <p>Name: <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ""; ?> <br><br> User ID: <?php echo isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ""; ?> <br><br> Membership Validity:</p>
       </div>
 
       <a href="Login.php">

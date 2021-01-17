@@ -75,12 +75,12 @@ include "login.php";
             <h1 class="hi2"> Find Books</h1>
             <label>Book Name or ISBN:</label> <br>
             <input type="text" name="book_isbn" />
-            <input class = "SE"  type="submit" name="search" value="Search"> 
+            <input class = "SE"  type="submit" name="search" value="Search">
             <input class = "po"  type="submit" name="add_to_list" value="Add to list">
-            
+
          </form>
 
-         
+
       </div>
 
    </div>
@@ -102,25 +102,25 @@ include "login.php";
           }
 
 
-         if(isset($_POST['search'])) { 
-            
+         if(isset($_POST['search'])) {
+
              if ($count == 1) {
-               
+
            ?>
                <script type="text/javascript">
                  alert("Book Found!");
                </script>
              <?php
              } else {
-         
+
              ?>
                <script type="text/javascript">
                  alert("Sorry, this Book is not available");
                </script>
            <?php
-         
+
              }
-        } 
+        }
 
 
         if(isset($_POST['add_to_list'])) {
@@ -131,27 +131,24 @@ include "login.php";
             $res = mysqli_query($connection, $sql);
 
 
-               
+
             ?>
                 <script type="text/javascript">
                   alert("Book Added!");
                 </script>
               <?php
               } else {
-          
+
               ?>
                 <script type="text/javascript">
                   alert("Sorry, this Book is not available");
                 </script>
             <?php
-          
+
               }
         }
 
         ?>
-
-
-
 
 
 </body>
