@@ -1,5 +1,6 @@
 <?php
 include "connection.php";
+include "login.php";
 ?>
 
 
@@ -126,7 +127,7 @@ include "connection.php";
 
          if ($count == 1) {
 
-            //$sql = "INSERT INTO borrowed_book_list VALUES ('$user_id' , $_POST['book_isbn'] ,  )";
+            $sql = "INSERT INTO borrowed_book_list VALUES ('$user_id' , $_POST['book_isbn'] ,  )";
             $res = mysqli_query($connection, $sql);
 
 
