@@ -106,9 +106,8 @@ if(isset($_POST['logout']))
    <?php
 
          $count = 0;
-         $sql = "SELECT Book_id from `all_book_list`";
-         $res = mysqli_query($connection, $sql);
-
+         $sql = "SELECT Book_id, Book_name, Genre from `all_book_list`";
+         $res = mysqli_query($connection, $sql);         
          
          while ($row = mysqli_fetch_assoc($res)) {
             if ($row['Book_id'] == $_POST['book_isbn']) {
@@ -140,24 +139,32 @@ if(isset($_POST['logout']))
 
 
         if(isset($_POST['add_to_list'])) {
+          
+          $issue_date = strtotime("");
+          $issue_date_store = date("Y-m-d H:i:s", $issue_date);
 
-         if ($count == 1) {
+          $return_date = strtotime("+3 Month");
+          $return_date_store = date("Y-m-d H:i:s", $return_date);
 
-
-           /* $sql = "INSERT INTO borrowed_book_list VALUES ('$user_id' , $_POST['book_isbn'] ,  )";
-            $res = mysqli_query($connection, $sql);*/
-
-            //$sql = "INSERT INTO borrowed_book_list VALUES ('$user_id' , $_POST['book_isbn'] ,  )";
-            $res = mysqli_query($connection, $sql);
-
-
+           if ($count == 1) {
+                while ($row = mysqli_fetch_assoc($res)) {
+                      if ($row['Book_id'] == $_POST['book_isbn']) {
+                         $sql2 = "INSERT INTO borrowed_book_list VALUES ($_SESSION['user_id'] , $_POST['book_isbn'] , $row['Book_name'], '$issue_date_store', '$return_date_store')";
+                         $res2 = mysqli_query($connection, $sql2);
+                      }
+                }   
+            
+              
+            
                
             ?>
                 <script type="text/javascript">
                   alert("Book Added!");
                 </script>
               <?php
-              } else {
+              } 
+
+              else {
           
               ?>
                 <script type="text/javascript">

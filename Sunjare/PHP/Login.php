@@ -3,10 +3,10 @@ include "connection.php";
 $invalidMessage = '';
 if(isset($_POST["login"]))
 {
-    $username = $_POST["username"];
+    $user_id = $_POST["user_id"];
     $password = $_POST["password"];
 
-    $sql = "SELECT * FROM member_info WHERE name='$username' AND password='$password' ";
+    $sql = "SELECT * FROM member_info WHERE user_id='$user_id' AND password='$password' ";
     $result = mysqli_query($connection, $sql);
 
     
@@ -51,9 +51,9 @@ if(isset($_POST["login"]))
             <div class="alert-danger"><?php echo $invalidMessage; ?></div>
             <?php } ?>
             <div class="txt_field">
-                <input name="username"  type="text" required>
+                <input name="user_id"  type="text" required>
                 <span></span>
-                <label>Username</label>
+                <label>User ID</label>
             </div>
             <div class="txt_field">
                 <input name="password" type="password" required>
