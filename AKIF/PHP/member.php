@@ -30,7 +30,9 @@ if(isset($_POST['logout']))
    <div class="user_info_box">
 
       <div class="top">
-         <p>Name: <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ""; ?> <br><br> User ID: <?php echo isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ""; ?> <br><br> Membership Validity:</p>
+         <p>Name: <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ""; ?> <br><br> 
+         User ID: <?php echo isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ""; ?>  <br><br>
+         Membership Validity: <?php echo isset($_SESSION['mem_exp']) ? $_SESSION['mem_exp'] : ""; ?> <br><br></p>
       </div>
 
       <form method="post" action="member.php">
