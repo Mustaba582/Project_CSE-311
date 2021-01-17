@@ -19,6 +19,7 @@ if(isset($_POST["login"]))
         session_start();
         $_SESSION['user_id'] = $row['user_id'];
         $_SESSION['name'] = $row['name'];
+        $_SESSION['mem_exp'] = $row['mem_exp'];
         $_SESSION['login'] = true;
 
         //echo $row['name'];
