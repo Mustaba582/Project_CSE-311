@@ -43,27 +43,46 @@ if (isset($_POST['logout'])) {
 
    <div class="borrowed_box">
 
-      <div class="top">
+      
          <h1 class="hi1">Borrowed Books</h1>
-      </div>
 
-      <div>
          <ol class="borrowed_list">
-            <li>book one</li>
-            <li>book one</li>
-            <li>book one</li>
-            <li>book one</li>
-            <li>book one</li>
-            <li>book one</li>
-            <li>book one</li>
-            <li>book one</li>
-            <li>book one</li>
-            <li>book one</li>
+
+
+            <?php
+
+                  
+
+               
+                  $count_book = 1;      
+                  $sql = "Select Mem_Id , Book_id , Book_Name , Issue_date , Return_date
+                  from borrowed_book_list";
+                  $result = mysqli_query($connection, $sql);
+
+                  
+                  
+
+                  echo"<br>";
+
+                  
+                  if(mysqli_num_rows($result) > 0){
+                     while($row = mysqli_fetch_assoc($result)){
+                        if($_SESSION['user_id'] == $row['Mem_Id']){
+                        echo  "Serial No:   " .$count_book .", ISBN:  " ." " .$row["Book_id"] ." " .", Name: " ." " .$row["Book_Name"] ." " .", Issue Date:   "  ." " .$row["Issue_date"] ." " ." , Return Date: " ." " .$row["Return_date"];
+                        echo "<br><br>";
+                        $count_book = $count_book + 1;
+                      }
+                     }
+                    }
+
+
+            ?>
+
          </ol>
          <a href="all_books.php">
             <button class="SA">View All books</button>
          </a>
-      </div>
+      
 
    </div>
 
@@ -71,13 +90,31 @@ if (isset($_POST['logout'])) {
 
       <div>
 
-         <form class="form_e" style="width: 80%;">
+         <form class="form_e" method = "post" style="width: 80%;">
             <h1 class="hi3"> Edit borrowed list</h1>
-            <label>Enter the serial number:</label> <br>
-            <input type="text" name="book_isbn" />
+            <label>Enter the ISBN number:</label> <br>
+            <input type="text" name="book_isbn" >
+            <input class="SE" type="submit" name="delete" value="Delete">
          </form>
 
-         <button class="SE">Remove</button>
+         <?php
+         if (isset($_POST['delete'])) {
+
+             
+             $sql = "DELETE FROM borrowed_book_list WHERE Mem_Id = $_SESSION[user_id]  and Book_id = $_POST[book_isbn]";
+             $result = mysqli_query($connection, $sql);
+
+             ?>
+             <script type="text/javascript">
+                alert("Successfully Deleted! Please Refresh");
+             </script>
+          <?php
+            
+         }
+         ?>
+
+         
+
       </div>
 
    </div>
@@ -88,7 +125,7 @@ if (isset($_POST['logout'])) {
 
          <form class="form" action="" method="post" style="width: 80%;">
             <h1 class="hi2"> Find Books</h1>
-            <label>Book Name or ISBN:</label> <br>
+            <label>Enter Book ISBN:</label> <br>
             <input type="text" name="book_isbn">
             <input class="SE" type="submit" name="search" value="Search">
             <input class="po" type="submit" name="add_to_list" value="Add to list">
@@ -145,16 +182,34 @@ if (isset($_POST['logout'])) {
 
       $return_date = strtotime("+3 Month");
       $return_date_store = date("Y-m-d H:i:s", $return_date);
-      echo $_SESSION['user_id'] . 'And ' . $_POST['book_isbn'] . $bookname . $issue_date_store . $return_date_store;
+     
+      
+
       if ($count == 1) {
-         mysqli_query($connection, "INSERT INTO `borrowed_book_list` VALUES ('$_SESSION[user_id]' , '$_POST[book_isbn]' , '$bookname', '$issue_date_store', '$return_date_store')");
+
+         if($count_book<=10){
+            mysqli_query($connection, "INSERT INTO `borrowed_book_list` VALUES ('$_SESSION[user_id]' , '$_POST[book_isbn]' , '$bookname', '$issue_date_store', '$return_date_store')");
+            
+
+            ?>
+            <script type="text/javascript">
+               alert("Book Added!");
+            </script>
+         <?php
+         }
+
+         else{
+            
+            ?>
+            <script type="text/javascript">
+               alert("Sorry , You Can Not Add More Than 10 Books!");
+            </script>
+         <?php
 
 
-      ?>
-         <script type="text/javascript">
-            alert("Book Added!");
-         </script>
-      <?php
+         }
+
+
       } else {
 
       ?>
