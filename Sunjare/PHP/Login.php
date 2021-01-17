@@ -1,5 +1,32 @@
 <?php
 include "connection.php";
+$invalidMessage = '';
+if(isset($_POST["login"]))
+{
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $sql = "SELECT * FROM member_info WHERE name='$username' AND password='$password' ";
+    $result = mysqli_query($connection, $sql);
+
+    
+
+    if (!$row=$result->fetch_assoc()) {
+        $invalidMessage = "Username or password is invalid";
+    }
+    else
+    {
+        session_start();
+        $_SESSION['user_id'] = $row['user_id'];
+        $_SESSION['name'] = $row['name'];
+        $_SESSION['login'] = true;
+
+        //echo $row['name'];
+
+        header("Location: ./member.php");
+    }
+    
+}
 
 ?>
 
@@ -17,19 +44,23 @@ include "connection.php";
 <body>
     <div class="center">
         <h1>Login</h1>
-        <form method="post">
+        
+        <form method="post" action="Login.php">
+            <?php if($invalidMessage != '') { ?>
+            <div class="alert-danger"><?php echo $invalidMessage; ?></div>
+            <?php } ?>
             <div class="txt_field">
-                <input type="text" name = 'user_id' required = ''>
+                <input name="username"  type="text" required>
                 <span></span>
                 <label>Username</label>
             </div>
             <div class="txt_field">
-                <input type="password" name = 'password' required = ''>
+                <input name="password" type="password" required>
                 <span></span>
                 <label>Password</label>
             </div>
 
-            <button type="submit">Login</button>
+            <button type="submit" name="login">Login</button>
 
 
             <div class="signup_link">
@@ -37,16 +68,6 @@ include "connection.php";
             </div>
         </form>
     </div>
-
-
-
-
-    <?php
-
-        $user_id = $_POST['user_id'];
-
-    ?>
-
 
 
 </body>
