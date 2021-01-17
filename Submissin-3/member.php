@@ -1,21 +1,6 @@
 <?php
 include "connection.php";
-<<<<<<< HEAD
-session_start();
-if(isset($_SESSION['login'])) {
-   if($_SESSION['login'] != true) {
-      header("Location: ./index.php");
-   }
-} else {
-   header("Location: ./index.php");
-}
-if(isset($_POST['logout'])) 
-{
-   unset($_SESSION['login'], $_SESSION['name'], $_SESSION['user_id']);
-   header("Location: ./index.php");
-}
-=======
->>>>>>> 08f82a7787da6e2aaf75c2e613ca873145f680f7
+include "login.php";
 ?>
 
 
@@ -33,10 +18,7 @@ if(isset($_POST['logout']))
    <div class="user_info_box">
 
       <div class="top">
-
-      <p>Name: <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ""; 
-      ?> <br><br> User ID: <?php echo isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ""; ?> <br><br> Membership Validity:</p>
-
+         <p>Name: <br><br> User ID: <br><br> Membership Validity:</p>
       </div>
 
       <a href="Login.php">
@@ -111,7 +93,7 @@ if(isset($_POST['logout']))
          $sql = "SELECT Book_id from `all_book_list`";
          $res = mysqli_query($connection, $sql);
 
-         
+         $row = mysqli_fetch_assoc($res);
          while ($row = mysqli_fetch_assoc($res)) {
             if ($row['Book_id'] == $_POST['book_isbn']) {
               $count = $count + 1;
@@ -145,13 +127,8 @@ if(isset($_POST['logout']))
 
          if ($count == 1) {
 
-<<<<<<< HEAD
-           /* $sql = "INSERT INTO borrowed_book_list VALUES ('$user_id' , $_POST['book_isbn'] ,  )";
-            $res = mysqli_query($connection, $sql);*/
-=======
-            //$sql = "INSERT INTO borrowed_book_list VALUES ('$user_id' , $_POST['book_isbn'] ,  )";
+            $sql = "INSERT INTO borrowed_book_list VALUES ('$user_id' , $_POST['book_isbn'] ,  )";
             $res = mysqli_query($connection, $sql);
->>>>>>> 08f82a7787da6e2aaf75c2e613ca873145f680f7
 
 
                
