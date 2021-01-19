@@ -31,7 +31,7 @@ $res = mysqli_query($connection, $sql);
       <div class="main-menu">
        <ul>
         <li>
-         <a href="Admin Panel.php">Home</a>
+         <a href="Admin_Panel.php">Home</a>
         </li>
        </ul>
       </div>
