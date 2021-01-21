@@ -4,14 +4,14 @@ include "connection.php";
 session_start();
 if (isset($_SESSION['login'])) {
    if ($_SESSION['login'] != true) {
-      header("Location: ./index.php");
+      header("Location: ./Login.php");
    }
 } else {
-   header("Location: ./index.php");
+   header("Location: ./Login.php");
 }
 if (isset($_POST['logout'])) {
    unset($_SESSION['login'], $_SESSION['name'], $_SESSION['user_id']);
-   header("Location: ./index.php");
+   header("Location: ./Login.php");
 }
 
 ?>
@@ -36,12 +36,36 @@ if (isset($_POST['logout'])) {
 
       <div class="top">
 
-         <p>Name: <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ""; ?> <br><br> User ID: <?php echo isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ""; ?> <br><br> Membership Validity: <?php echo isset($_SESSION['mem_exp']) ? $_SESSION['mem_exp'] : ""; ?> <br><br></p>
+
+
+
+         <p>
+         Name: <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : ""; ?> 
+         <br><br> 
+         User ID: <?php echo isset($_SESSION['user_id']) ? $_SESSION['user_id'] : ""; ?> 
+         <br><br> 
+         Membership Validity: <?php echo isset($_SESSION['mem_exp']) ? $_SESSION['mem_exp'] : ""; ?> 
+         
+         <br><br>
+         </p>
+
+
+
+
 
       </div>
+
+
+
+
       <form method="post" action="member.php">
          <button class="button" type="submit" name="logout"><u>Logout</u></button>
       </form>
+
+
+
+
+
    </div>
 
    <div class="borrowed_box">
@@ -82,7 +106,7 @@ if (isset($_POST['logout'])) {
             ?>
 
          </ol>
-         <a href="all_books.php">
+         <a href="all_book_list_member.php">
             <button class="SA">View All books</button>
          </a>
       

@@ -33,7 +33,7 @@ $res = mysqli_query($connection, $sql);
        <ul>
         <li>
         
-        <a href="Admin Panel.php">Home</a>
+        <a href="member.php">Home</a>
          
         </li>
        </ul>
