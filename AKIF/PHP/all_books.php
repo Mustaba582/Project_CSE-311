@@ -32,9 +32,13 @@ $res = mysqli_query($connection, $sql);
       <div class="main-menu">
        <ul>
         <li>
+<<<<<<< HEAD
         
         <a href="Admin Panel.php">Home</a>
          
+=======
+         <a href="Admin_Panel.php">Home</a>
+>>>>>>> 1654352ed3c88c1a29a5bca2da1f8a6fd0d01a87
         </li>
        </ul>
       </div>
