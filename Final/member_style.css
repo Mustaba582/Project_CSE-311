@@ -1,10 +1,15 @@
-body{
-	background-color: #8ca4ca;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	font-weight: normal;
-	line-height: 1.5em;
-   }
+body {
+    background: linear-gradient(to bottom, #E9E4F0 0,#D3CCE3 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5em;
+}
+
+   .top 
+   {
+    color: #fff;
+}
    
  
 
@@ -16,7 +21,7 @@ body{
 				border-radius: 15px;
 				margin-left: 39%;
 				margin-top: 60px;
-				margin-bottom: 150px;
+				margin-bottom: 100px;
    }
 			
 			label{
@@ -65,12 +70,12 @@ body{
 .borrowed_box{
 	   background: lightcyan;
 	   width: 95%;
-	   height: 700px;
+	   /* height: 700px; */
 				border: 3px solid orange;
 				border-radius: 15px;
 				margin-left: 2.5%;
-				margin-top: 60px;
-				margin-bottom: 300px;
+				margin-top: 4px;
+				margin-bottom: 2px;
    }
 
 .borrowed_box .hi1{
@@ -92,7 +97,7 @@ body{
 	   height: 80px;
 				border: 2px solid rgba(211, 121, 18, 0.356);
 				border-radius: 15px;
-	   margin-top: 50px;
+	   margin-top: 20px;
 	   margin-left: 590px;
 	   margin-bottom: 0px;
    
@@ -108,7 +113,7 @@ body{
 	   height: 280px;
 	   width: 75%;
 	   margin-left: 13%;
-	   margin-top: 5px;
+	   margin-top: 100px;
 	   margin-bottom: 120px;
 				border: 3px solid rgba(255, 169, 169, 0.164);
     border-radius: 15px;
@@ -155,6 +160,14 @@ body{
 						padding-top: 10px;
 						padding-left: 10px;
    }
+   
+.form_e label {
+    margin-left: 85px;
+}
+.form label 
+{
+    margin-left: 85px;
+}
 
 .form .hi2{
  margin-left: 52%;
@@ -183,8 +196,8 @@ body{
 	height: 60px;
 	border: 2px solid rgb(214, 125, 130);
 	border-radius: 15px;
-	margin-top: 10px;
-	margin-left: 40%;
+	margin-top: 20px;
+	margin-left: 50%;
    }
 
    .SE:hover{
@@ -201,8 +214,8 @@ body{
 	height: 60px;
 	border: 2px solid rgb(214, 125, 130);
 	border-radius: 15px;
-	margin-top: 15px;
-	margin-left: 40%;
+	margin-top: 20px;
+	margin-left: 50%;
    }
 
    .po:hover{
