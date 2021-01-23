@@ -8,8 +8,10 @@ include "connection.php";
 <html>
 
 <head>
+
   <title>Place Order</title>
   <link rel="stylesheet" type="text/css" href="new_account_style.css">
+  <link rel="stylesheet" type="text/css" href="member_style.css">
 </head>
 
 <body>
@@ -65,6 +67,43 @@ include "connection.php";
   }
   ?>
 
+  
+
+
+  
+  </div>
+
+  <div class="borrowed_box">
+
+
+    <h1 class="hi1">Publisher Info</h1>
+
+    <ol class="borrowed_list">
+
+
+      <?php
+
+      $count_book = 1;
+      $sql = "SELECT `Publisher_Id`, `Publisher_Name`, `Address` FROM `publisher`";
+      $result = mysqli_query($connection, $sql);
+
+
+      echo "<br>";
+
+
+      if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo  "Serial No:   " . $count_book . ", Publisher_Id:  " . " " . $row["Publisher_Id"] . " " . ", Publisher_Name: " . " " . $row["Publisher_Name"] . " " . ", Address:   "  . " " . $row["Address"] . " ";
+            echo "<br><br>";
+            $count_book = $count_book + 1;
+        }
+      }
+
+
+      ?>
+
+    </ol>
+  </div>
 
 </body>
 

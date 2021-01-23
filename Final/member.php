@@ -107,13 +107,13 @@ if (isset($_POST['logout'])) {
 
       </ol>
 
-
+<a href="all_book_list_member.php">
+      <button class="SA">View All books</button>
+   </a>
 
    </div>
 
-   <a href="all_book_list_member.php">
-      <button class="SA">View All books</button>
-   </a>
+   
 
    <div class="edit_borrowed">
 
